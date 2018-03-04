@@ -8,11 +8,16 @@
 <GridPane xmlns="http://javafx.com/javafx"
           xmlns:fx="http://javafx.com/fxml"
           fx:controller="com.github.mtf90.Main"
+          stylesheets="@styles.css"
           alignment="CENTER">
 
     <VBox alignment="BASELINE_CENTER" spacing="10">
         <Label fx:id="label"/>
-        <Button text="Close" onAction="#shutdown"/>
+        <Button text="Create new diagram"/>
+        <Button text="Load diagram"/>
+        <Button text="Options"/>
+        <Button text="About"/>
+        <Button text="Close"/>
     </VBox>
 
 </GridPane>
