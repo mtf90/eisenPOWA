@@ -1,3 +1,7 @@
 .button {
     -fx-pref-width: 200px;
 }
+
+#comicFont {
+    -fx-font-family: "Comic Sans MS";
+}
