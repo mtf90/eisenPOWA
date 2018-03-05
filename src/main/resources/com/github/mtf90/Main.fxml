@@ -17,7 +17,6 @@
         <Button text="Load diagram"/>
         <Button text="Options"/>
         <Button text="About"/>
-        <Button text="Close"/>
+        <Button text="Close" onMouseClicked="#shutdown"/>
     </VBox>
-
 </GridPane>
