@@ -1,5 +1,7 @@
 package com.github.mtf90
 
+import com.github.mtf90.util.SceneFactory
+import com.github.mtf90.util.Scenes
 import javafx.application.Application
 import javafx.fxml.FXMLLoader
 import javafx.scene.Parent
@@ -11,9 +13,13 @@ class Launcher : Application() {
 
     @Throws(IOException::class)
     override fun start(primaryStage: Stage) {
-        val root = FXMLLoader.load<Parent>(javaClass.getResource("/com/github/mtf90/Main.fxml"))
+        SceneFactory.initStage(primaryStage)
+        SceneFactory.setScene(Scenes.Menu)
+
         primaryStage.title = "EisenPOWA"
-        primaryStage.scene = Scene(root, 800.0, 600.0)
+        primaryStage.width = 800.0
+        primaryStage.height = 600.0
+        primaryStage.centerOnScreen()
         primaryStage.show()
     }
 

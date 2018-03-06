@@ -1,20 +1,27 @@
 package com.github.mtf90
 
+import com.github.mtf90.model.Project
+import com.github.mtf90.util.SceneFactory
+import com.github.mtf90.util.Scenes
 import javafx.application.Platform
-import javafx.event.ActionEvent
 import javafx.fxml.FXML
 import javafx.fxml.Initializable
 import javafx.scene.control.Label
 import java.net.URL
 import java.util.*
 
-class Main : Initializable {
+class Menu : Initializable {
 
     @FXML
-    var label: Label? = null
+    lateinit var label: Label
 
     override fun initialize(location: URL?, resources: ResourceBundle?) {
-        label?.text = "Hello World!"
+        label.text = "Hello World!"
+    }
+
+    fun openNew() {
+        Project.INSTANCE = Project()
+        SceneFactory.setScene(Scenes.Editor)
     }
 
     fun shutdown() {

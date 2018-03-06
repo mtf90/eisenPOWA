@@ -7,16 +7,16 @@
 
 <GridPane xmlns="http://javafx.com/javafx"
           xmlns:fx="http://javafx.com/fxml"
-          fx:controller="com.github.mtf90.Main"
+          fx:controller="com.github.mtf90.Menu"
           stylesheets="@styles.css"
           alignment="CENTER">
 
     <VBox alignment="BASELINE_CENTER" spacing="10" id="comicFont">
         <Label fx:id="label"/>
-        <Button text="Create new diagram"/>
-        <Button text="Load diagram"/>
+        <Button text="New Project" onAction="#openNew"/>
+        <Button text="Load Project"/>
         <Button text="Options"/>
         <Button text="About"/>
-        <Button text="Close" onMouseClicked="#shutdown"/>
+        <Button text="Close" onAction="#shutdown"/>
     </VBox>
 </GridPane>
