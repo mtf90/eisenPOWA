@@ -1,15 +1,22 @@
 package com.github.mtf90
 
+import com.github.mtf90.model.DummyProject
+import com.github.mtf90.model.Matrix
+import com.github.mtf90.model.Project
 import com.github.mtf90.util.SceneFactory
 import com.github.mtf90.util.Scenes
-import javafx.fxml.Initializable
-import java.net.URL
-import java.util.*
+import javafx.fxml.FXML
 
-class Editor : Initializable {
+class Editor {
 
-    override fun initialize(location: URL?, resources: ResourceBundle?) {
-        // Do something
+    val project: Project
+
+    @FXML
+    val currentMatrix: Matrix
+
+    init {
+        project = DummyProject()
+        currentMatrix = project.getCurrentMatrix()
     }
 
     fun close() {

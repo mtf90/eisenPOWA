@@ -1,15 +1,21 @@
 package com.github.mtf90.model
 
-class Project {
+open class Project {
 
     private val matrices: MutableList<Matrix>
     private val currentMatrix: Matrix
     private val openTasks: MutableList<Task>
 
-    init {
+    constructor() {
         currentMatrix = Matrix()
         matrices = mutableListOf(currentMatrix)
         openTasks = mutableListOf()
+    }
+
+    protected constructor(matrices: MutableList<Matrix>, currentMatrix: Matrix, openTasks: MutableList<Task>) {
+        this.currentMatrix = currentMatrix
+        this.matrices = matrices
+        this.openTasks = openTasks
     }
 
     fun getMatrices(): List<Matrix> {

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.github.mtf90.view.CellView?>
+<?import com.github.mtf90.view.MatrixView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<fx:root type="com.github.mtf90.view.MatrixView" xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         alignment="CENTER"
+         hgap="10.0" vgap="10.0"
+         styleClass="eisenhower"
+         stylesheets="@../styles.css">
+
+    <columnConstraints>
+        <ColumnConstraints minWidth="50" halignment="CENTER"/>
+        <ColumnConstraints hgrow="ALWAYS"/>
+        <ColumnConstraints hgrow="ALWAYS"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="50" vgrow="ALWAYS"/>
+        <RowConstraints minHeight="150" vgrow="ALWAYS"/>
+        <RowConstraints minHeight="150" vgrow="ALWAYS"/>
+    </rowConstraints>
+
+    <Label GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.halignment="CENTER" text="Urgent"/>
+    <Label GridPane.columnIndex="2" GridPane.rowIndex="0" GridPane.halignment="CENTER" text="Not Urgent"/>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.valignment="CENTER" text="Important" rotate="-90"/>
+    <Label GridPane.columnIndex="0"
+           GridPane.rowIndex="2"
+           GridPane.valignment="CENTER"
+           text="Not Important"
+           rotate="-90"/>
+
+    <CellView GridPane.columnIndex="1" GridPane.rowIndex="1" tasks="$controller.urgentImportantTasks"/>
+    <CellView GridPane.columnIndex="1" GridPane.rowIndex="2" tasks="$controller.nonUrgentImportantTasks"/>
+    <CellView GridPane.columnIndex="2" GridPane.rowIndex="1" tasks="$controller.urgentNonImportantTasks"/>
+    <CellView GridPane.columnIndex="2" GridPane.rowIndex="2" tasks="$controller.nonUrgentNonImportantTasks"/>
+</fx:root>

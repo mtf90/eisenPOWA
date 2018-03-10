@@ -5,3 +5,10 @@
 #comicFont {
     -fx-font-family: "Comic Sans MS";
 }
+
+.eisenhower {
+    -fx-border-style: solid inside;
+    -fx-border-width: 2;
+    -fx-border-insets: 5;
+    -fx-border-color: blue;
+}

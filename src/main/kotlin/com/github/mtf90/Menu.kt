@@ -1,5 +1,6 @@
 package com.github.mtf90
 
+import com.github.mtf90.model.DummyProject
 import com.github.mtf90.model.Project
 import com.github.mtf90.util.SceneFactory
 import com.github.mtf90.util.Scenes
@@ -20,7 +21,7 @@ class Menu : Initializable {
     }
 
     fun openNew() {
-        Project.INSTANCE = Project()
+        Project.INSTANCE = DummyProject()
         SceneFactory.setScene(Scenes.Editor)
     }
 

@@ -6,6 +6,8 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.VBox?>
 
+<?import com.github.mtf90.view.MatrixView?>
+
 <GridPane xmlns="http://javafx.com/javafx"
           xmlns:fx="http://javafx.com/fxml"
           fx:controller="com.github.mtf90.Editor"
@@ -23,7 +25,9 @@
         <Button text="Close Project" onAction="#close"/>
     </VBox>
 
-    <Label GridPane.columnIndex="1" text="Editor Column" alignment="TOP_CENTER"/>
+    <MatrixView GridPane.columnIndex="1" matrix="$controller.currentMatrix"/>
 
-    <Label GridPane.columnIndex="2" text="Task Column" alignment="TOP_CENTER"/>
+    <VBox GridPane.columnIndex="2" spacing="10" alignment="TOP_CENTER">
+        <Label text="Task Column"/>
+    </VBox>
 </GridPane>
