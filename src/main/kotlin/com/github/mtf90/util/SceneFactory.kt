@@ -17,5 +17,4 @@ object SceneFactory {
         val root = FXMLLoader.load<Parent>(javaClass.getResource(s.scenePath))
         stage.scene = Scene(root)
     }
-
 }

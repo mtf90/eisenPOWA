@@ -21,5 +21,4 @@ class MatrixView(@NamedArg("matrix") @FXML val matrix: Matrix) : GridPane() {
         nonUrgentNonImportantTasks = matrix.getCellContent(Matrix.Urgency.NOT_URGENT, Matrix.Importance.NOT_IMPORTANT)
         ViewFactory.initialize(this)
     }
-
 }

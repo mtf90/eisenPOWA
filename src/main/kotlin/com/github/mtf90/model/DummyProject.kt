@@ -25,5 +25,4 @@ class DummyProject : Project(getDummyMatrices(), getDummyCurrentMatrix(), getDum
             return mutableListOf(Task("OT1", "Open Task 1"), Task("OT2", "Open Task 2"))
         }
     }
-
 }

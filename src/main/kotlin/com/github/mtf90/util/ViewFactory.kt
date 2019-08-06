@@ -1,7 +1,6 @@
 package com.github.mtf90.util
 
 import javafx.fxml.FXMLLoader
-import java.io.IOException
 import java.net.URL
 
 
@@ -13,19 +12,15 @@ object ViewFactory {
         fxmlLoader.setRoot(view)
         fxmlLoader.setController(view)
 
-        try {
-            fxmlLoader.load<Any>()
-        } catch (exception: IOException) {
-            throw RuntimeException(exception)
-        }
+        fxmlLoader.load<Any>()
     }
 
     fun <T> Class<T>.toFXMLResource(): URL {
         val sb = StringBuilder()
         sb.append('/')
-        sb.append(this.packageName.replace('.', '/'))
+        sb.append(packageName.replace('.', '/'))
         sb.append('/')
-        sb.append(this.simpleName)
+        sb.append(simpleName)
         sb.append(".fxml")
 
         return this.getResource(sb.toString())

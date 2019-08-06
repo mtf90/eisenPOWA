@@ -3,13 +3,10 @@ package com.github.mtf90
 import com.github.mtf90.util.SceneFactory
 import com.github.mtf90.util.Scenes
 import javafx.application.Application
-import javafx.fxml.FXMLLoader
-import javafx.scene.Parent
-import javafx.scene.Scene
 import javafx.stage.Stage
 import java.io.IOException
 
-class Launcher : Application() {
+class App : Application() {
 
     @Throws(IOException::class)
     override fun start(primaryStage: Stage) {
@@ -26,7 +23,7 @@ class Launcher : Application() {
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
-            Application.launch(Launcher::class.java, *args)
+            launch(App::class.java, *args)
         }
     }
 }
