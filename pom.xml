@@ -93,7 +93,7 @@
                     <jlinkImageName>eisenPOWA</jlinkImageName>
                     <jlinkZipName>eisenPOWA</jlinkZipName>
                     <launcher>eisenPOWA</launcher>
-                    <mainClass>com.github.mtf90.Main</mainClass>
+                    <mainClass>com.github.mtf90.App</mainClass>
                     <noHeaderFiles>true</noHeaderFiles>
                     <noManPages>true</noManPages>
                     <stripDebug>true</stripDebug>

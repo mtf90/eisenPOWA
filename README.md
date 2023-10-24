@@ -10,7 +10,7 @@ There are several ways to run the app.
 
 ### From the IDE
 
-* Run the `com.github.mtf90.Main.kt` file in IntelliJ.
+* Run the `com.github.mtf90.App.kt` file in IntelliJ.
 
 ### From the CLI
 
