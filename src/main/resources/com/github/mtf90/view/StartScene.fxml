@@ -7,16 +7,13 @@
 
 <GridPane xmlns="http://javafx.com/javafx"
           xmlns:fx="http://javafx.com/fxml"
-          fx:controller="com.github.mtf90.Menu"
+          fx:controller="com.github.mtf90.view.controller.MenuSceneController"
           stylesheets="@styles.css"
           alignment="CENTER">
 
-    <VBox alignment="BASELINE_CENTER" spacing="10" id="comicFont">
-        <Label fx:id="label"/>
+    <VBox alignment="BASELINE_CENTER" spacing="10">
+        <Label text="Welcome to the EisenPOWA app!"/>
         <Button text="New Project" onAction="#openNew"/>
-        <Button text="Load Project"/>
-        <Button text="Options"/>
-        <Button text="About"/>
-        <Button text="Close" onAction="#shutdown"/>
+        <Button text="Exit" onAction="#exit"/>
     </VBox>
 </GridPane>

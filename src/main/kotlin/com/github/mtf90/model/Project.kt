@@ -2,32 +2,21 @@ package com.github.mtf90.model
 
 open class Project {
 
-    private val matrices: MutableList<Matrix>
-    private val currentMatrix: Matrix
+    private val matrix: Matrix
     private val openTasks: MutableList<Task>
 
     constructor() {
-        currentMatrix = Matrix()
-        matrices = mutableListOf(currentMatrix)
+        matrix = Matrix()
         openTasks = mutableListOf()
     }
 
-    protected constructor(matrices: MutableList<Matrix>, currentMatrix: Matrix, openTasks: MutableList<Task>) {
-        this.currentMatrix = currentMatrix
-        this.matrices = matrices
+    protected constructor(matrix: Matrix, openTasks: MutableList<Task>) {
+        this.matrix = matrix
         this.openTasks = openTasks
     }
 
-    fun getMatrices(): List<Matrix> {
-        return matrices
-    }
-
-    fun addMatric(m: Matrix) {
-        matrices.add(m)
-    }
-
-    fun getCurrentMatrix(): Matrix {
-        return currentMatrix
+    fun getMatrix(): Matrix {
+        return matrix
     }
 
     fun getOpenTasks(): List<Task> {
@@ -36,9 +25,5 @@ open class Project {
 
     fun addTask(t: Task) {
         openTasks.add(t)
-    }
-
-    companion object {
-        var INSTANCE: Project = Project()
     }
 }

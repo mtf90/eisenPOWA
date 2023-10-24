@@ -1,15 +1,16 @@
-package com.github.mtf90.util
+package com.github.mtf90.view
 
+import com.github.mtf90.util.Scenes
 import javafx.fxml.FXMLLoader
 import javafx.scene.Parent
 import javafx.scene.Scene
 import javafx.stage.Stage
 
-object SceneFactory {
+object SceneController {
 
     private lateinit var stage: Stage
 
-    fun initStage(s: Stage) {
+    fun init(s: Stage) {
         stage = s
     }
 

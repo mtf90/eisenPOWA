@@ -1,17 +1,15 @@
 package com.github.mtf90
 
-import com.github.mtf90.util.SceneFactory
+import com.github.mtf90.view.SceneController
 import com.github.mtf90.util.Scenes
 import javafx.application.Application
 import javafx.stage.Stage
-import java.io.IOException
 
 class App : Application() {
 
-    @Throws(IOException::class)
     override fun start(primaryStage: Stage) {
-        SceneFactory.initStage(primaryStage)
-        SceneFactory.setScene(Scenes.Menu)
+        SceneController.init(primaryStage)
+        SceneController.setScene(Scenes.Menu)
 
         primaryStage.title = "EisenPOWA"
         primaryStage.width = 800.0

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root type="javafx.scene.layout.VBox"
+         xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         styleClass="task"
+         stylesheets="@../styles.css">
+
+    <Label fx:id="heading"
+           wrapText="true"
+           styleClass="task-heading"
+           stylesheets="@../styles.css"/>
+    <Label fx:id="description"
+           wrapText="true"
+           styleClass="task-description"
+           stylesheets="@../styles.css"/>
+
+</fx:root>

@@ -20,7 +20,7 @@ class Matrix {
         cells[u.ordinal][i.ordinal].add(task)
     }
 
-    fun addRemoveFromCell(u: Urgency, i: Importance, task: Task) {
+    fun removeFromCell(u: Urgency, i: Importance, task: Task) {
         cells[u.ordinal][i.ordinal].remove(task)
     }
 }

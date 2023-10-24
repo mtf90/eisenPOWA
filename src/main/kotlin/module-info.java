@@ -1,9 +1,9 @@
 module com.github.mtf90 {
     exports com.github.mtf90;
-    exports com.github.mtf90.model;
-    exports com.github.mtf90.view;
 
-    opens com.github.mtf90 to javafx.fxml;
+    opens com.github.mtf90.view to javafx.fxml;
+    opens com.github.mtf90.view.controller to javafx.fxml;
+    opens com.github.mtf90.view.component to javafx.fxml;
 
     requires javafx.controls;
     requires javafx.fxml;

@@ -1,0 +1,40 @@
+.button {
+    -fx-pref-width: 200px;
+}
+
+.eisenhower {
+    -fx-border-style: solid inside;
+    -fx-border-width: 2;
+    -fx-border-insets: 10;
+    -fx-border-color: blue;
+}
+
+#open-tasks {
+    -fx-border-style: solid inside;
+    -fx-border-width: 2;
+    -fx-border-insets: 10;
+    -fx-border-color: green;
+    -fx-min-width: 300px;
+    -fx-max-width: 300px;
+}
+
+#open-task-list {
+    -fx-border-style: solid none none none;
+    -fx-border-width: 2;
+    -fx-border-color: black;
+}
+
+.grid-tasks {
+    -fx-background-color: red;
+    -fx-padding: 20px;
+}
+
+.task {
+    -fx-border-insets: 5px;
+    -fx-padding: 5px;
+    -fx-border-color: green;
+}
+
+.task-heading {
+    -fx-font-style: italic;
+}

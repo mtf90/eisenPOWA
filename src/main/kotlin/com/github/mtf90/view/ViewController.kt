@@ -1,10 +1,10 @@
-package com.github.mtf90.util
+package com.github.mtf90.view
 
 import javafx.fxml.FXMLLoader
+import java.lang.IllegalArgumentException
 import java.net.URL
 
-
-object ViewFactory {
+object ViewController {
 
     fun <T : Any> initialize(view: T) {
         val fxmlLoader = FXMLLoader(view.javaClass.toFXMLResource())
@@ -15,7 +15,7 @@ object ViewFactory {
         fxmlLoader.load<Any>()
     }
 
-    fun <T> Class<T>.toFXMLResource(): URL {
+    private fun <T> Class<T>.toFXMLResource(): URL {
         val sb = StringBuilder()
         sb.append('/')
         sb.append(packageName.replace('.', '/'))
@@ -23,6 +23,6 @@ object ViewFactory {
         sb.append(simpleName)
         sb.append(".fxml")
 
-        return this.getResource(sb.toString())
+        return this.getResource(sb.toString()) ?: throw IllegalArgumentException("Cannot find resource $sb")
     }
 }

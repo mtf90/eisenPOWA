@@ -1,13 +1,9 @@
 package com.github.mtf90.model
 
-class DummyProject : Project(getDummyMatrices(), getDummyCurrentMatrix(), getDummyOpenTasks()) {
+class DummyProject : Project(getDummyMatrix(), getDummyOpenTasks()) {
 
     companion object {
-        fun getDummyMatrices(): MutableList<Matrix> {
-            return mutableListOf()
-        }
-
-        fun getDummyCurrentMatrix(): Matrix {
+        fun getDummyMatrix(): Matrix {
             val result = Matrix()
             result.addToCell(Matrix.Urgency.URGENT, Matrix.Importance.IMPORTANT, Task("T1", "Task 1"))
             result.addToCell(Matrix.Urgency.URGENT, Matrix.Importance.IMPORTANT, Task("T1", "Task 1"))
