@@ -2,39 +2,49 @@
     -fx-pref-width: 200px;
 }
 
-.eisenhower {
-    -fx-border-style: solid inside;
-    -fx-border-width: 2;
+#eisenhower {
     -fx-border-insets: 10;
-    -fx-border-color: blue;
+    -fx-min-width: 500px;
 }
 
 #open-tasks {
-    -fx-border-style: solid inside;
+    -fx-border-style: solid;
     -fx-border-width: 2;
     -fx-border-insets: 10;
-    -fx-border-color: green;
+    -fx-border-color: gray;
     -fx-min-width: 300px;
     -fx-max-width: 300px;
 }
 
-#open-task-list {
-    -fx-border-style: solid none none none;
-    -fx-border-width: 2;
+#open-tasks-label {
+    -fx-border-style: solid;
+    -fx-border-width: 0 0 2 0;
     -fx-border-color: black;
+    -fx-padding: 10px;
 }
 
 .grid-tasks {
-    -fx-background-color: red;
     -fx-padding: 20px;
+    -fx-border-style: solid;
+    -fx-border-width: 2;
+    -fx-border-color: gray;
 }
 
 .task {
     -fx-border-insets: 5px;
+    -fx-background-insets: 5px;
     -fx-padding: 5px;
-    -fx-border-color: green;
+    -fx-border-color: gray;
 }
 
 .task-heading {
     -fx-font-style: italic;
+}
+
+.drag-source:highlighted {
+    -fx-background-color: green;
+}
+
+.drop-target:highlighted {
+    -fx-background-color: lightgreen;
 }

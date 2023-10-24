@@ -6,7 +6,7 @@
 <fx:root type="javafx.scene.layout.VBox"
          xmlns="http://javafx.com/javafx"
          xmlns:fx="http://javafx.com/fxml"
-         styleClass="task"
+         styleClass="task, drag-source"
          stylesheets="@../styles.css">
 
     <Label fx:id="heading"

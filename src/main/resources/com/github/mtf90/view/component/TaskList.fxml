@@ -5,5 +5,7 @@
 <fx:root type="com.github.mtf90.view.component.TaskList"
          xmlns="http://javafx.com/javafx"
          xmlns:fx="http://javafx.com/fxml"
-         alignment="TOP_CENTER">
+         alignment="TOP_CENTER"
+         styleClass="drop-target"
+         stylesheets="@../styles.css">
 </fx:root>

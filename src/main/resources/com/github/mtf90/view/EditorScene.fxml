@@ -12,6 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.github.mtf90.view.controller.EditorSceneController">
@@ -22,9 +23,9 @@
     <center>
         <GridPane xmlns="http://javafx.com/javafx"
                   xmlns:fx="http://javafx.com/fxml"
+                  id="eisenhower"
                   alignment="TOP_CENTER"
                   hgap="10.0" vgap="10.0"
-                  styleClass="eisenhower"
                   stylesheets="@styles.css">
 
             <columnConstraints>
@@ -33,9 +34,9 @@
                 <ColumnConstraints minWidth="150" hgrow="SOMETIMES"/>
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints minHeight="50" vgrow="NEVER"/>
-                <RowConstraints minHeight="150" vgrow="NEVER"/>
-                <RowConstraints minHeight="150" vgrow="NEVER"/>
+                <RowConstraints minHeight="50" vgrow="NEVER" valignment="CENTER"/>
+                <RowConstraints minHeight="150" vgrow="NEVER" valignment="TOP"/>
+                <RowConstraints minHeight="150" vgrow="NEVER" valignment="TOP"/>
             </rowConstraints>
 
             <Label GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.halignment="CENTER" text="Urgent"/>
@@ -45,14 +46,12 @@
             <Group GridPane.columnIndex="0"
                    GridPane.rowIndex="1"
                    GridPane.valignment="CENTER">
-                <Label text="Important"
-                       rotate="-90"/>
+                <Label text="Important" rotate="-90"/>
             </Group>
             <Group GridPane.columnIndex="0"
                    GridPane.rowIndex="2"
                    GridPane.valignment="CENTER">
-                <Label text="Not Important"
-                       rotate="-90"/>
+                <Label text="Not Important" rotate="-90"/>
             </Group>
 
             <TaskList GridPane.columnIndex="1"
@@ -81,18 +80,18 @@
     <right>
         <BorderPane id="open-tasks" stylesheets="@styles.css">
             <top>
-                <Label text="Open Tasks" style="-fx-padding: 10px;"/>
+                <Label text="Open Tasks" id="open-tasks-label" maxWidth="Infinity"/>
             </top>
             <center>
+                <!--                <ScrollPane minHeight="200" fitToHeight="true" fitToWidth="true" >-->
                 <TaskList tasks="$controller.openTasks" id="open-task-list" stylesheets="@styles.css"/>
+                <!--                </ScrollPane>-->
             </center>
             <bottom>
-                <VBox>
-                    <children>
-                        <TextField fx:id="newTaskHeading" promptText="Heading"/>
-                        <TextArea fx:id="newTaskDescription" promptText="Description" maxHeight="50" wrapText="true"/>
-                        <Button text="Create New Task" onAction="#createNewTask" maxWidth="Infinity"/>
-                    </children>
+                <VBox style="-fx-padding: 5px;">
+                    <TextField fx:id="newTaskHeading" promptText="Heading"/>
+                    <TextArea fx:id="newTaskDescription" promptText="Description" maxHeight="50" wrapText="true"/>
+                    <Button text="Create New Task" onAction="#createNewTask" maxWidth="Infinity"/>
                 </VBox>
             </bottom>
         </BorderPane>
