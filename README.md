@@ -18,5 +18,5 @@ There are several ways to run the app.
 
 ### As a distributable
 
-* Run `mvn package -Pdist` (optionally with `-Pwith-linux`, `-Pwith-mac`, `-Pwith-windows` to support more platforms).
+* Run `mvn package -Pdist`
 * The `target/eisenPOWA.zip` artifact is a self-contained archive that should include all files necessary to run the app without any setup (such as installing a JRE).
