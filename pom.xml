@@ -28,7 +28,7 @@
         <maven-shade-plugin.version>3.5.1</maven-shade-plugin.version>
         <tidy-pom-plugin.version>1.2.0</tidy-pom-plugin.version>
 
-        <kotlin.version>1.9.20-RC</kotlin.version>
+        <kotlin.version>1.9.20</kotlin.version>
         <openjfx.version>21.0.1</openjfx.version>
     </properties>
 
